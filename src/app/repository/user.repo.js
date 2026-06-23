@@ -6,8 +6,7 @@ class UserRepository {
     static async findByEmail(email) {
 
         const pool = getPool();
-        const [rows] = await pool.query(
-            "SELECT * FROM users WHERE email = ? LIMIT 1", [email]);
+        const [rows] = await pool.query("SELECT * FROM users WHERE email = ? LIMIT 1", [email]);
         return rows[0] ?? null;
     }
 
