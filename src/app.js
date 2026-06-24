@@ -1,10 +1,12 @@
+// app.js file
 
 import app from "#server";
 import ENV from "#env";
 import { connectDB } from "#connection";
-import { initUserTable } from "#models";
-
+import { userTable } from "#models";
+import { cleanUp }  from "#utils";
 import "#syncRoutes";
+
 
 const PORT = ENV.PORT;
 
@@ -12,7 +14,9 @@ const start = async () => {
 
     try {
         await connectDB();
-        await initUserTable();
+        await userTable();
+        cleanUp();
+        
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
         });

@@ -1,4 +1,4 @@
-
+// src/server/routes.js file
 import app from "#server";
 import { userRouter } from "#routes";
 

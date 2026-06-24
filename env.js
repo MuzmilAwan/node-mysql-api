@@ -10,8 +10,8 @@ const ENV = {
     DB_NAME: env.DB_NAME,
     PORT: env.PORT,
     CORS: env.CORS,
-    JWT_SECRET: env.JWT_SECRET,
-    JWT_EXPIRES_IN: env.JWT_EXPIRES_IN,
+    JWT_ACCESS_SECRET:  env.JWT_ACCESS_SECRET,
+    JWT_REFRESH_SECRET: env.JWT_REFRESH_SECRET,
 };
 
 export default ENV;

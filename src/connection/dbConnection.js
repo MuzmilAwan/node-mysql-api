@@ -1,11 +1,11 @@
-
+// dbConnection.js file
 import mysql from "mysql2/promise";
 import ENV from "#env";
 
 let pool;
 
 const connectDB = async () => {
-    
+
     pool = mysql.createPool({
         host: ENV.HOST,
         user: ENV.USER,

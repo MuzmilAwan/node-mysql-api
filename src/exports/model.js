@@ -1,1 +1,1 @@
-export { default as initUserTable} from "../models/user.model.js";
+export { userTable } from "../models/user.model.js";
